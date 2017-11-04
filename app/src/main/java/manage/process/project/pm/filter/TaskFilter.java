@@ -5,7 +5,7 @@ import android.widget.Filter;
 import java.util.ArrayList;
 
 import manage.process.project.pm.adapter.TaskAdapter;
-import manage.process.project.pm.object.MTask;
+import manage.process.project.pm.object.OTask;
 
 /**
  * Created by Tuan on 31/10/2017.
@@ -14,9 +14,9 @@ import manage.process.project.pm.object.MTask;
 public class TaskFilter extends Filter {
 
     TaskAdapter taskAdapter;
-    ArrayList<MTask> filterTask;
+    ArrayList<OTask> filterTask;
 
-    public TaskFilter(TaskAdapter taskAdapter, ArrayList<MTask> filterTask) {
+    public TaskFilter(TaskAdapter taskAdapter, ArrayList<OTask> filterTask) {
         this.taskAdapter = taskAdapter;
         this.filterTask = filterTask;
     }
@@ -29,11 +29,11 @@ public class TaskFilter extends Filter {
             //Change to upper
             constraint = constraint.toString().toUpperCase();
             //Store our filtered task
-            ArrayList<MTask> filteredTask = new ArrayList<>();
+            ArrayList<OTask> filteredTask = new ArrayList<>();
 
             for(int i=0;i<filterTask.size();i++){
                 //check
-                if(filterTask.get(i).getTeam().getMembers().get(0).getFullName().toUpperCase().contains(constraint)){
+                if(filterTask.get(i).getName().contains(constraint)){
                     //add a task to filtered task
                     filteredTask.add(filterTask.get(i));
                 }
@@ -50,7 +50,7 @@ public class TaskFilter extends Filter {
 
     @Override
     protected void publishResults(CharSequence constraint, FilterResults results) {
-        taskAdapter.setTasks((ArrayList<MTask>) results.values);
+        taskAdapter.setTasks((ArrayList<OTask>) results.values);
 
         //refresh
         taskAdapter.notifyDataSetChanged();

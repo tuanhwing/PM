@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
-        private int NUM_ITEMS = 3;
+        private int NUM_ITEMS = 2;
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     return TaskFragment.newInstance();
                 case 1: // Fragment # 0 - This will show FirstFragment different title
                     return FirstFragment.newInstance(1, "Page # 2");
-                case 2: // Fragment # 1 - This will show SecondFragment
-                    return FirstFragment.newInstance(2, "Page # 3");
+//                case 2: // Fragment # 1 - This will show SecondFragment
+//                    return FirstFragment.newInstance(2, "Page # 3");
                 default:
                     return null;
             }
@@ -113,15 +113,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
 
-                case 2: {
-                    myDrawable = getResources().getDrawable(R.drawable.ic_deadline);
-                    sb = new SpannableStringBuilder("  Page3"); // space added before text for convenience
-
-                    myDrawable.setBounds(0, 0, myDrawable.getIntrinsicWidth(), myDrawable.getIntrinsicHeight());
-                    span = new ImageSpan(myDrawable, ImageSpan.ALIGN_BASELINE);
-                    sb.setSpan(span, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    break;
-                }
+//                case 2: {
+//                    myDrawable = getResources().getDrawable(R.drawable.ic_deadline);
+//                    sb = new SpannableStringBuilder("  Page3"); // space added before text for convenience
+//
+//                    myDrawable.setBounds(0, 0, myDrawable.getIntrinsicWidth(), myDrawable.getIntrinsicHeight());
+//                    span = new ImageSpan(myDrawable, ImageSpan.ALIGN_BASELINE);
+//                    sb.setSpan(span, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                    break;
+//                }
             }
 
             return sb;

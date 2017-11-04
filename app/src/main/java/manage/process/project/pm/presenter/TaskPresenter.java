@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import manage.process.project.pm.callback.TaskResult;
 import manage.process.project.pm.model.TaskHelper;
-import manage.process.project.pm.object.MTask;
+import manage.process.project.pm.object.OTask;
 import manage.process.project.pm.view.TaskView;
 
 /**
@@ -25,7 +25,7 @@ public class TaskPresenter implements TaskResult{
         model.loadTasks();
     }
 
-    public void addTask(MTask task) {
+    public void addTask(OTask task) {
         view.addTask(task);
     }
 
@@ -35,14 +35,15 @@ public class TaskPresenter implements TaskResult{
     }
 
     @Override
-    public void loadTasksSuccess(ArrayList<MTask> tasks) {
+    public void loadTasksSuccess(ArrayList<OTask> tasks) {
         view.inVisibleProgressBar();
-        view.showTasks(tasks);
+        view.showTasks(false, tasks);
     }
 
 
     @Override
     public void loadTasksError() {
-
+        view.inVisibleProgressBar();
+        view.showTasks(true,null);
     }
 }

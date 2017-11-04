@@ -14,8 +14,8 @@ import java.net.URISyntaxException;
 public class Singleton {
 
     private static final int SERVERPORT = 8080;
-//    private static final String SERVERIP = "10.69.227.191";
-    private static final String SERVERIP = "192.168.0.107";
+    private static final String SERVERIP = "10.69.225.76";
+//    private static final String SERVERIP = "192.168.0.106";
     private static String TAG = "socket_tag";
     private static Socket socket;
     {

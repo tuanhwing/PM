@@ -2,7 +2,7 @@ package manage.process.project.pm.callback;
 
 import java.util.ArrayList;
 
-import manage.process.project.pm.object.MTask;
+import manage.process.project.pm.object.OTask;
 
 /**
  * Created by Tuan on 01/11/2017.
@@ -11,6 +11,6 @@ import manage.process.project.pm.object.MTask;
 public interface TaskResult {
 
     void startLoadTasks();
-    void loadTasksSuccess(ArrayList<MTask> tasks);
+    void loadTasksSuccess(ArrayList<OTask> tasks);
     void loadTasksError();
 }

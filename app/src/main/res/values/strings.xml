@@ -5,17 +5,18 @@
 
     <!-- TASK -->
     <string name="task_team">MEMBERS</string>
-    <string name="deadline">Deadline:</string>
-    <string name="name_document">Tên tài liệu:</string>
-    <string name="num">Số lượng:</string>
-    <string name="num_of_page">Số trang:</string>
-    <string name="num_of_sub">Số phụ bản:</string>
-    <string name="num_color_out">Số màu in bìa:</string>
-    <string name="num_color_in">Số màu in ruột:</string>
-    <string name="num_color_sub">Số màu in phụ bản:</string>
-    <string name="paper_out">Giấy in bìa:</string>
-    <string name="paper_in">Giấy in ruột:</string>
-    <string name="paper_sub">Giấy in phụ bản:</string>
-    <string name="document_size">Khổ in:</string>
-    <string name="type_pack">Kiểu đóng:</string>
+    <string name="time_require">Deadline</string>
+    <string name="name_document">Tên tài liệu</string>
+    <string name="count">Số lượng</string>
+    <string name="num_of_page">Số trang</string>
+    <string name="copy_count">Số phụ bản</string>
+    <string name="cover_color">Số màu in bìa</string>
+    <string name="paper_color">Số màu in ruột</string>
+    <string name="copy_color">Số màu in phụ bản</string>
+    <string name="cover_paper">Giấy in bìa</string>
+    <string name="paper_type">Giấy in ruột</string>
+    <string name="copy_paper_type">Giấy in phụ bản</string>
+    <string name="size">Khổ in</string>
+    <string name="bookbinding_type">Kiểu đóng</string>
+    <string name="other_require">Other require</string>
 </resources>

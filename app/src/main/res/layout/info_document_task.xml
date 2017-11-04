@@ -1,158 +1,396 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:textAlignment="center"
+            android:text="DOCUMENT"
+            android:drawableLeft="@drawable/ic_document"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:text="@string/name_document" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp">
+        <TextView
+            android:id="@+id/tv_name_document"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:text="null" />
+    </TableRow>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:weightSum="2">
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/count" />
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="2dp"
-                android:layout_weight="1"
-                android:background="#2ebadc" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_document"
-                android:gravity="bottom" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_marginRight="5dp"
-                android:background="#2ebadc" />
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:textColor="@color/colorWhite"
-                    android:text="@string/name_document"/>
-                <TextView
-                    android:id="@+id/tv_name_document"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@color/colorWhite"
-                    android:text="null" />
-            </LinearLayout>
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/copy_count" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/tv_num_of_doc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_num_of_page"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_num_of_sub"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-            </LinearLayout>
+        <TextView
+            android:id="@+id/tv_copy_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite" />
+    </TableRow>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/tv_color_of_out"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_color_of_in"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_color_of_sub"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-            </LinearLayout>
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/cover_color" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/tv_type_paper_out"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_type_paper_in"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_type_paper_sub"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-            </LinearLayout>
+        <TextView
+            android:id="@+id/tv_cover_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/tv_size"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-                <TextView
-                    android:id="@+id/tv_type_pack"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorWhite"
-                    android:layout_weight="1" />
-            </LinearLayout>
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/paper_color" />
 
-            <TextView
-                android:id="@+id/tv_scription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite" />
+        <TextView
+            android:id="@+id/tv_paper_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
 
-        </LinearLayout>
-    </RelativeLayout>
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/copy_color" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_copy_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:text="@string/cover_paper" />
+
+        <TextView
+            android:id="@+id/tv_cover_paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/paper_type" />
+
+        <TextView
+            android:id="@+id/tv_paper_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/copy_paper_type" />
+
+        <TextView
+            android:id="@+id/tv_copy_paper_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:text="@string/size" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:padding="3dip"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/bookbinding_type" />
+
+        <TextView
+            android:id="@+id/tv_bookbinding_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite"
+            android:text="@string/other_require" />
+
+        <TextView
+            android:id="@+id/tv_other_require"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:background="@drawable/border"
+            android:textColor="@color/colorWhite" />
+    </TableRow>
+
+</TableLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" >-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="20dp">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="2">-->
+
+            <!--<View-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="2dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="#2ebadc" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableLeft="@drawable/ic_document"-->
+                <!--android:gravity="bottom" />-->
+
+            <!--<View-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="2dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:background="#2ebadc" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="15dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:paddingBottom="10dp">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:text="@string/name_document"-->
+                    <!--android:textColor="@color/color_title_task" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_name_document"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:text="null" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_count"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_copy_count"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textColor="@color/colorWhite" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_cover_color"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_paper_color"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_copy_color"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_cover_paper"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_paper_type"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_copy_paper_type"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_size"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_bookbinding_type"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorWhite"-->
+                    <!--android:layout_weight="1" />-->
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_other_require"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/colorWhite" />-->
+
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+
+<!--</LinearLayout>-->

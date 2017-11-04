@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import manage.process.project.pm.adapter.TaskAdapter;
 import manage.process.project.pm.model.TaskHelper;
-import manage.process.project.pm.object.MTask;
+import manage.process.project.pm.object.OTask;
 import manage.process.project.pm.presenter.TaskPresenter;
 import manage.process.project.pm.socket.Singleton;
 import manage.process.project.pm.view.TaskView;
@@ -52,7 +53,7 @@ public class TaskFragment extends Fragment implements TaskView {
 
     TaskAdapter taskAdapter;
 
-    List<MTask> items = new ArrayList<>();
+    List<OTask> items = new ArrayList<>();
 
     Singleton singleton;
 
@@ -140,14 +141,17 @@ public class TaskFragment extends Fragment implements TaskView {
     }
 
     @Override
-    public void showTasks(ArrayList<MTask> tasks) {
-        items = tasks;
-        taskAdapter = new TaskAdapter(tasks,getActivity());
-        mRecyclerView.setAdapter(taskAdapter);
+    public void showTasks(boolean error, ArrayList<OTask> tasks) {
+        if(!error){
+            items = tasks;
+            taskAdapter = new TaskAdapter(tasks,getActivity());
+            mRecyclerView.setAdapter(taskAdapter);
+        } else Toast.makeText(getContext(),"Error connect server",Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
-    public void addTask(MTask task) {
+    public void addTask(OTask task) {
         items.add(task);
         taskAdapter.notifyDataSetChanged();
     }

@@ -6,5 +6,7 @@ package manage.process.project.pm.util;
 
 public class Utils {
 
-    public final static String IP_SERVER = "http://10.69.227.191:3000/";
+    public final static String IP_SERVER = "http://10.69.225.76:8080/";
+//    public final static String IP_SERVER = "http://192.168.0.106:8080/";
+
 }
